@@ -22,55 +22,21 @@ public class  loginServlet extends HttpServlet {
     
     
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//		PrintWriter out = response.getWriter();
-//		out.print("working....    ");
-//		System.out.println("hwllos im done   ");
-//		out.print("user name - "+ request.getParameter("username"));
-//		out.print("password - " + request.getParameter("password"));
-		
-		
-		// this is create the another jsp file and send data to this file
-		
-//		RequestDispatcher dip = request.getRequestDispatcher("registration.jsp");
-//		request.setAttribute("username", request.getParameter("username"));
-//		request.setAttribute("password", request.getParameter("password"));	
-//		dip.forward(request, response);
 
-		
-		// working database add code
-		
-//		try {
-//			Class.forName("com.mysql.cj.jdbc.Driver");
-//			java.sql.Connection con = DriverManager.getConnection(
-//					  "jdbc:mysql://aws.connect.psdb.cloud/ems?sslMode=VERIFY_IDENTITY",
-//					  "5fcctylhdxvvpq1rq8of",
-//					  "pscale_pw_r3EiQxHiykDiKanr8wrXWszeSNYiolllrJWuJ15c9qG");
-//			java.sql.PreparedStatement pst = con.prepareStatement("insert into login (username, password) values(?,?);");
-//			pst.setString(1, request.getParameter("username"));
-//			pst.setString(2, request.getParameter("password"));
-//			int row = pst.executeUpdate();
-//			if (row > 0) {
-//				PrintWriter out = response.getWriter();
-//				out.print("working....    ");
-//			}else {
-//				System.out.println("heldfkjsd");
-//			}
-//			
-//		}catch(Exception e){
-//			PrintWriter out = response.getWriter();
-//			out.print("not working....    ");
-//			e.printStackTrace();
-//			System.out.println(e);
-//			
-//		}
 		
 		
 		try {
+<<<<<<< Updated upstream
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			java.sql.Connection con = DriverManager.getConnection(
 			  "jdbc:mysql://aws.connect.psdb.cloud/ems?sslMode=VERIFY_IDENTITY",
 			  "f4kgmlkcgg1nj2gu3wl3", "pscale_pw_fohYq855B06VthlpvUeOCfNR4pOdAOYJEE7TwzCUx5e");
 			java.sql.PreparedStatement pst = con.prepareStatement("SELECT * FROM ems.user_details where username = ? and password =?;");
+=======
+			// Establish a database connection
+            Connection conn = DatabaseConnection.getConnection();
+		java.sql.PreparedStatement pst = conn.prepareStatement("SELECT * FROM ems.user_details where username = ? and password =?;");
+>>>>>>> Stashed changes
 			pst.setString(1, request.getParameter("username"));
 			pst.setString(2, request.getParameter("password"));
 			ResultSet row = pst.executeQuery();
@@ -80,14 +46,20 @@ public class  loginServlet extends HttpServlet {
 				
 				
 				// this is create the another jsp file and send data to this file
-				
+				String id = row.getString("id");
 				String username = row.getString("username");
 			    String password = row.getString("password");
 			    String name = row.getString("Name");
 			    String email = row.getString("email");
 			    int phone = row.getInt("phone");
+			    System.out.println(id);
 				
+<<<<<<< Updated upstream
 				RequestDispatcher dip = request.getRequestDispatcher("registration.jsp");
+=======
+				RequestDispatcher dip = request.getRequestDispatcher("./views/users/profile.jsp");
+				request.setAttribute("id", id);
+>>>>>>> Stashed changes
 				request.setAttribute("username", username);
 				request.setAttribute("password", password);	
 				request.setAttribute("name", name);
