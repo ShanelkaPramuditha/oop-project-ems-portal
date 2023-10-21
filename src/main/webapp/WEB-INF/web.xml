@@ -58,7 +58,7 @@
   <servlet-mapping>
     <servlet-name>DisplayServlet</servlet-name>
     <url-pattern>/DisplayServlet</url-pattern>
-  <servlet-mapping>
+  </servlet-mapping>
   <servlet>
     <description></description>
     <display-name>UpdateUserServlet</display-name>
