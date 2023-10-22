@@ -109,4 +109,15 @@
     <servlet-name>DeleteNoticeServlet</servlet-name>
     <url-pattern>/DeleteNoticeServlet</url-pattern>
   </servlet-mapping>
+
+  <servlet>
+  	<description></description>
+    <display-name>ViewMCQServlet</display-name>
+    <servlet-name>ViewMCQServlet</servlet-name>
+    <servlet-class>com.ems.task.ViewMCQServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ViewMCQServlet</servlet-name>
+    <url-pattern>/ViewMCQServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
