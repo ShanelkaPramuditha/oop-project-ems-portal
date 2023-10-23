@@ -11,6 +11,7 @@
         Title: <input type="text" name="title"><br>
         Content: <textarea name="content"></textarea><br>
         <input type="submit" value="Add Notice">
+        <a href="./notices.jsp">Notices Table</a>
     </form>
 </body>
 </html>

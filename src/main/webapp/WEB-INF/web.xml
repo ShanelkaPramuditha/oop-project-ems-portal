@@ -149,4 +149,34 @@
     <servlet-name>InsertTaskServlet</servlet-name>
     <url-pattern>/InsertTaskServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AddFaqServlet</display-name>
+    <servlet-name>AddFaqServlet</servlet-name>
+    <servlet-class>com.ems.faq.AddFaqServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddFaqServlet</servlet-name>
+    <url-pattern>/AddFaqServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>UpdateFaqServlet</display-name>
+    <servlet-name>UpdateFaqServlet</servlet-name>
+    <servlet-class>com.ems.faq.UpdateFaqServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdateFaqServlet</servlet-name>
+    <url-pattern>/UpdateFaqServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DeleteFaqServlet</display-name>
+    <servlet-name>DeleteFaqServlet</servlet-name>
+    <servlet-class>com.ems.faq.DeleteFaqServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteFaqServlet</servlet-name>
+    <url-pattern>/DeleteFaqServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
