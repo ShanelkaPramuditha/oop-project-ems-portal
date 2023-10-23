@@ -139,4 +139,24 @@
     <servlet-name>DeleteResultServlet</servlet-name>
     <url-pattern>/DeleteResultServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AddRecorrectionServlet</display-name>
+    <servlet-name>AddRecorrectionServlet</servlet-name>
+    <servlet-class>com.ems.results.AddRecorrectionServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddRecorrectionServlet</servlet-name>
+    <url-pattern>/AddRecorrectionServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DeleteRecorrectionServlet</display-name>
+    <servlet-name>DeleteRecorrectionServlet</servlet-name>
+    <servlet-class>com.ems.results.DeleteRecorrectionServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteRecorrectionServlet</servlet-name>
+    <url-pattern>/DeleteRecorrectionServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
