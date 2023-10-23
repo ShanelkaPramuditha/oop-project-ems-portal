@@ -11,14 +11,17 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
+
 
 @WebServlet(name = "AddTaskServlet", urlPatterns = {"/AddTaskServlet"})
 public class AddTaskServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
+        	HttpSession session = request.getSession();
             // Retrieve data from the JSP form
             String taskName = request.getParameter("taskName");
-            int userId = 1;
+            int userId = (int) session.getAttribute("uId");
             int qCount = Integer.parseInt(request.getParameter("qCount"));
 
             // Create a Task object and insert it into the Task table
@@ -40,29 +43,28 @@ public class AddTaskServlet extends HttpServlet {
                 
                 Question questionC = new Question();
                 questionC.setQuestion(question, cAnswer, marks, taskId);
-
+                
+             // Set answers
+                List<String> answersList = new ArrayList<>();
+                for (int j = 0; j < 4; j++) {
+                	answersList.add(request.getParameter("ans" + (i + 1) + (j + 1)));
+                }
+                for (String name : answersList) {
+                	System.out.println(name);
+                }
+                questionC.setAnswers(answersList);
+                //answersList.clear();
+                
                 QuestionDAO questionDAO = new QuestionDAO(); // Initialize MarksDAO with a database connection
                 questionDAO.insertQuestion(questionC);
                 
-                //int questionId = questionC.getQuestionId();
-
-                // Set answers
-                List<String> answersList = new ArrayList<>();
-                for (int j = 0; j < 4; j++) {
-                	answersList.add(request.getParameter("ans" + (j + 1)));
-                }
-                questionC.setAnswers(answersList);
-                List<String> retrievedAnswers = questionC.getAnswers();
-                for (String answer : retrievedAnswers) {
-                    System.out.println(answer);
-                }
             }
 
             // Set a success attribute for your JSP to display the success modal
             request.setAttribute("success", true);
 
             // Forward the request to your JSP page
-            RequestDispatcher dispatcher = request.getRequestDispatcher("./viewMCQ.jsp");
+            RequestDispatcher dispatcher = request.getRequestDispatcher("./views/tasks/mcq/viewMCQ.jsp");
             dispatcher.forward(request, response);
         } catch (SQLException e) {
             e.printStackTrace(); // Handle database exceptions appropriately

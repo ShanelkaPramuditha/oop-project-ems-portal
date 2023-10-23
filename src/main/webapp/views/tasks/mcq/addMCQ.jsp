@@ -12,7 +12,7 @@
         
         <%
         // Loop question
-        int question = 1;
+        int question = 2;
         for(int i = 0; i < question; i++) {
         %>
 	        <!-- Question 01 -->
@@ -24,8 +24,8 @@
 	        <%
 	        for(int j = 0; j < 4; j++) {
 	        %>
-		        <label for="ans<%= j + 1 %>">Answer <%= j + 1 %>: </label>
-		        <input type="text" name="ans<%= j + 1 %>" required><br>
+		        <label for="ans<%= i + 1 %><%= j + 1 %>">Answer <%= j + 1 %>: </label>
+		        <input type="text" name="ans<%= i + 1 %><%= j + 1 %>" required><br>
 		    <%
 		    }
 		    %>

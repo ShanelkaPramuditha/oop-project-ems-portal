@@ -9,17 +9,11 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 import com.ems.db.DatabaseConnection;
-
-//import com.mysql.jdbc.Connection;
-//import com.mysql.jdbc.PreparedStatement;
-
-
 
 @WebServlet(name = "loginServlet", urlPatterns = {"/loginServlet"})
 public class  loginServlet extends HttpServlet {
@@ -35,6 +29,7 @@ public class  loginServlet extends HttpServlet {
 			pst.setString(1, request.getParameter("username"));
 			pst.setString(2, request.getParameter("password"));
 			ResultSet row = pst.executeQuery();
+			
 			if (row.next()) {
 
 				// this is create the another jsp file and send data to this file
@@ -46,9 +41,12 @@ public class  loginServlet extends HttpServlet {
 			    int phone = row.getInt("phone");
 			    String role = row.getString("role");
 			    
+			    // create log in session
 			    HttpSession session = request.getSession();
 			    session.setAttribute("uId", uId);
 			    session.setAttribute("role", role);
+			    session.setAttribute("name", name);
+			    session.setAttribute("authenticated", true);
 				
 			    if (role.equals("student")) {
 					RequestDispatcher dip = request.getRequestDispatcher("./views/users/dash/sDashboard.jsp");
@@ -80,5 +78,4 @@ public class  loginServlet extends HttpServlet {
 			e.printStackTrace();
 		}
 	}
-
 }
