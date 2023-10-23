@@ -9,56 +9,79 @@
 <title>Insert title here</title>
 </head>
 <style>
- .login-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 50vh;
-        }
-        .login-form {
-            width: 350px;
-            padding: 20px;
-            border: 1px solid #ccc;
-            background: #f9f9f9;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            text-align: center;
-        }
-        .login-form label {
-            font-weight: bold;
-        }
-        .login-form input[type="text"],
-        .login-form input[type="password"] {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-        }
-        .login-form input[type="submit"] {
-            background-color: #007BFF;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 3px;
-            cursor: pointer;
-        }
-        .login-form input[type="submit"]:hover {
-            background-color: #0056b3;
-        }
-        .register-button {
-            margin-top: 10px;
-            background-color: #28A745;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 3px;
-            cursor: pointer;
-        }
-        .register-button:hover {
-            background-color: #1d8c3a;
-        }
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100vh;
+        padding: 0 20px;
+    }
+
+    .login-container {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+
+    .login-form {
+        padding: 20px;
+        border: 1px solid #ccc;
+        background: #f9f9f9;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        text-align: center;
+    }
+
+    .login-form label {
+        font-weight: bold;
+    }
+
+    .login-form input[type="text"],
+    .login-form input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+    }
+
+    .login-form input[type="submit"] {
+        background-color: #007BFF;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
+    .login-form input[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+
+    .register-button {
+        margin-top: 10px;
+        background-color: #28A745;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
+    .register-button:hover {
+        background-color: #1d8c3a;
+    }
+
+    .description-container {
+        flex: 1;
+        background: #007BFF;
+        color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+    }
 </style>
 <body>
 <jsp:include page="./components/header.jsp" />
@@ -76,11 +99,11 @@
             <button class="register-button" id="register-button">Register</button>
         </div>
 </div>
-<div>
+<!-- <div>
 <h1>Testing new Function - This section will be removed later</h1>
 	<a href="./tasks/selectTask.jsp">Create New Task</a>
   	<a href="./Image/addImage.jsp">Add the image</a>
-</div>
+</div> -->
 <script>
         document.getElementById("register-button").onclick = function () {
             // Redirect to a new page
