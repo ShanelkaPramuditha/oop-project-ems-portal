@@ -1,0 +1,15 @@
+@charset "UTF-8";
+footer {
+    background-color: #333; /* Dark background color */
+    color: #fff; /* White text color */
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    bottom: 0; /* Stick the footer to the bottom of the page */
+    width: 100%; /* Full width */
+}
+
+/* You can further style the text within the footer if needed */
+footer p {
+    font-size: 14px;
+}
