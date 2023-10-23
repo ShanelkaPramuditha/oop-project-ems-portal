@@ -109,4 +109,34 @@
     <servlet-name>DeleteNoticeServlet</servlet-name>
     <url-pattern>/DeleteNoticeServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AddResultServlet</display-name>
+    <servlet-name>AddResultServlet</servlet-name>
+    <servlet-class>com.ems.results.AddResultServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddResultServlet</servlet-name>
+    <url-pattern>/AddResultServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>UpdateResultServlet</display-name>
+    <servlet-name>UpdateResultServlet</servlet-name>
+    <servlet-class>com.ems.results.UpdateResultServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdateResultServlet</servlet-name>
+    <url-pattern>/UpdateResultServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DeleteResultServlet</display-name>
+    <servlet-name>DeleteResultServlet</servlet-name>
+    <servlet-class>com.ems.results.DeleteResultServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteResultServlet</servlet-name>
+    <url-pattern>/DeleteResultServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
