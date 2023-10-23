@@ -42,7 +42,8 @@
 </style>
 <body>
 
-
+<%-- <jsp:include page="./components/header.jsp" />
+ --%>
 <form action="insert" method="post">
 
 

@@ -10,7 +10,6 @@
     color: #fff; /* White text color */
     text-align: center;
     padding: 10px;
-    position: absolute;
     bottom: 0; /* Stick the footer to the bottom of the page */
     width: 100%; /* Full width */
 }
@@ -21,9 +20,11 @@ footer p {
 }</style>
 </head>
 <body>
+<div>
     <footer class="bg-dark text-white mt-5">
         <p>&copy; © Developed By Y2S1</p>
        
     </footer>
+</div>
 </body>
 </html>
