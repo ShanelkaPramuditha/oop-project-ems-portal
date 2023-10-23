@@ -8,109 +8,161 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 <title>Insert title here</title>
 </head>
-<style>
-    .container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 100vh;
-        padding: 0 20px;
-    }
+ <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1e58a1;
+            margin: 0;
+            padding: 0;
+        }
 
-    .login-container {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
-    }
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            height: 100vh;
+        }
 
-    .login-form {
-        padding: 20px;
-        border: 1px solid #ccc;
-        background: #f9f9f9;
-        border-radius: 5px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        text-align: center;
-    }
+        .left-side {
+          width: 643px;
+          height: 572px;
+            flex: 1;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+        }
 
-    .login-form label {
-        font-weight: bold;
-    }
+        .right-side {
+            height: 572px;
+            flex: 1;
+            padding: 20px;
+            background-color: #1e58a1;
+            border-radius: 5px;
+        }
 
-    .login-form input[type="text"],
-    .login-form input[type="password"] {
-        width: 100%;
-        padding: 10px;
-        margin: 10px 0;
-        border: 1px solid #ccc;
-        border-radius: 3px;
-    }
+        .form {
+            text-align: left;
+        }
+        .form h2{
+            text-align: center;
+            font-size: 36px;
+            font-weight: 700;
+            color: #1e58a1;
+        }
+        .users h2{
+            text-align: center;
+            font-size: 36px;
+            font-weight: 700;
+            color: #fff;
+            margin-top: 15px;
+        }
 
-    .login-form input[type="submit"] {
-        background-color: #007BFF;
-        color: white;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 3px;
-        cursor: pointer;
-    }
+        input[type="text"],
+        input[type="password"] {
+            width: 551.14px;
+            padding: 10px;
+            margin: 30px 0;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            font-size: 24px;
+            border: none;
+            border-bottom: 1px solid #ccc;;
+        }
 
-    .login-form input[type="submit"]:hover {
-        background-color: #0056b3;
-    }
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .users{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .users button {
+            width: 251px;
+            height: 69px;
+            border-radius: 50px;
+            padding: 10px;
+            margin: 110px 40px 40px 40px;
+            background-color: #fff;
+            color: #1e58a1;
+            border: none;
+            cursor: pointer;
+            font-size: 25px;
+            font-weight: 600;
 
-    .register-button {
-        margin-top: 10px;
-        background-color: #28A745;
-        color: white;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 3px;
-        cursor: pointer;
-    }
+        }
+        .signin{
+          text-align: center;
+          margin-top: 100px;
+        }
 
-    .register-button:hover {
-        background-color: #1d8c3a;
-    }
+        .button {
+            width: 251px;
+            height: 69px;
+            border-radius: 50px;
+            padding: 10px;
+            margin: 3px;
+            background-color: #1e58a1;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 25px;
+            font-weight: 600;
 
-    .description-container {
-        flex: 1;
-        background: #007BFF;
-        color: #fff;
-        padding: 20px;
-        border-radius: 5px;
-    }
-</style>
+        }
+        .vertical-line {
+            border-left: 1px solid #ccc;
+            height: 596px;
+            margin: 0 100px;
+        }
+    </style>
+</head>
 <body>
 <jsp:include page="./components/header.jsp" />
 
-<div class="login-container">
-        <div class="login-form">
-            <h2>Login Form</h2>
-            <form action="../loginServlet" method="post">
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required><br>
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required><br>
-                <input class="btn btn-primary" type="submit" value="Login">
-            </form>
-            <button class="register-button" id="register-button">Register</button>
+    <div class="container">
+        <div class="left-side">
+            <div class="form">
+                <h2>SIGN IN</h2>
+                        <form action="../loginServlet" method="post">
+
+                    <input type="text" placeholder="Username" required>
+                    <input type="password" placeholder="Password" required>
+                    <div class="signin">
+                      <button class="button" type="submit">SIGN IN</button>
+                    </div>
+
+                </form>
+            </div>
         </div>
-</div>
-<!-- <div>
-<h1>Testing new Function - This section will be removed later</h1>
-	<a href="./tasks/selectTask.jsp">Create New Task</a>
-  	<a href="./Image/addImage.jsp">Add the image</a>
-</div> -->
-<script>
-        document.getElementById("register-button").onclick = function () {
+        <div class="vertical-line"></div>
+        <div class="right-side">
+            <div class="users">
+                <h2>SIGN UP</h2>
+                <button class="button" id="teacher">Teacher</button>
+                <button class="button"id="Student">Student</button>
+            </div>
+        </div>
+    </div>
+<jsp:include page="./components/footer.jsp" />
+                    <script>
+        document.getElementById("Student").onclick = function () {
             // Redirect to a new page
             window.location.href = "./users/studentInsert.jsp";
         };
+        document.getElementById("teacher").onclick = function () {
+            // Redirect to a new page
+            window.location.href = "./users/registerT.jsp";
+        };
     </script>
-<jsp:include page="./components/footer.jsp" />
 </body>
+
 
 </html>
