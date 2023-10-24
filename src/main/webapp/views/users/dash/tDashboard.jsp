@@ -37,11 +37,11 @@
     <div id="menu">
         <h1>Teacher Dashboard</h1>
         <ul>
-            <li><a id="add-faq" href="#">ADD FAQ</a></li>
+            <li><a id="add-faq" href="http://localhost:8080/project/views/faq/addfaq.jsp">ADD FAQ</a></li>
             <li><a id="courses" href="#">COURSES</a></li>
-            <li><a id="notices" href="#">NOTICES</a></li>
-            <li><a id="results" href="#">RESULTS</a></li>
-            <li><a id="signout" href="#">Signout</a></li>
+            <li><a id="notices" href="http://localhost:8080/project/views/notices/notices.jsp">NOTICES</a></li>
+            <li><a id="results" href="http://localhost:8080/project/views/results/results.jsp">RESULTS</a></li>
+            <li><a id="signout" href="http://localhost:8080/project/views/home.jsp">Signout</a></li>
         </ul>
     </div>
     <div id="content">

@@ -4,6 +4,8 @@
 <html>
 <head>
     <title>Add FAQ</title>
+	<link rel="stylesheet" type="text/css" href="http://localhost:8080/project/views/css/faq/addFaq.css">
+	
 </head>
 <body>
     <h1>Add FAQ</h1>
