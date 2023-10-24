@@ -184,4 +184,14 @@
     <servlet-name>LogoutServlet</servlet-name>
     <url-pattern>/LogoutServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DisplayTaskServlet</display-name>
+    <servlet-name>DisplayTaskServlet</servlet-name>
+    <servlet-class>com.ems.task.DisplayTaskServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DisplayTaskServlet</servlet-name>
+    <url-pattern>/DisplayTaskServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

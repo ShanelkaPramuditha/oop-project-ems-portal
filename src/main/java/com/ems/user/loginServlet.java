@@ -29,6 +29,8 @@ public class  loginServlet extends HttpServlet {
 			pst.setString(1, request.getParameter("username"));
 			pst.setString(2, request.getParameter("password"));
 			ResultSet row = pst.executeQuery();
+			System.out.println(request.getParameter("username"));
+			System.out.println(request.getParameter("password"));
 			
 			if (row.next()) {
 
@@ -44,26 +46,22 @@ public class  loginServlet extends HttpServlet {
 			    // create log in session
 			    HttpSession session = request.getSession();
 			    session.setAttribute("uId", uId);
-			    session.setAttribute("role", role);
+			    //session.setAttribute("role", role);
 			    session.setAttribute("name", name);
 			    session.setAttribute("authenticated", true);
-				
+			    System.out.println(role);
+			    
+			    //System.out.println(role.equals("student"));
+			    				
 			    if (role.equals("student")) {
 					RequestDispatcher dip = request.getRequestDispatcher("./views/users/dash/sDashboard.jsp");
-					request.setAttribute("uId", uId);
-					request.setAttribute("username", username);
-					request.setAttribute("password", password);	
-					request.setAttribute("name", name);
-					request.setAttribute("email", email);	
-					request.setAttribute("phone", phone);
-					request.setAttribute("role", role);
 					dip.forward(request, response);
 			    }
 			    else if (role.equals("teacher")) {
 			    	RequestDispatcher dip = request.getRequestDispatcher("./views/users/dash/tDashboard.jsp");
 			    	dip.forward(request, response);
 			    }
-			    else if (role.equals("teacher")) {
+			    else if (role.equals("admin")) {
 			    	RequestDispatcher dip = request.getRequestDispatcher("./views/users/dash/aDashboard.jsp");
 			    	dip.forward(request, response);
 			    }

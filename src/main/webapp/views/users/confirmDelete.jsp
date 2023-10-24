@@ -59,7 +59,7 @@
     </style>
 </head>
 <body>
-<jsp:include page="./components/header.jsp" />
+<jsp:include page="../components/header.jsp" />
 
     <form action="../../DeleteUserServlet" method="DELETE">
         <input type="hidden" name="userId" value="${param.id}">
