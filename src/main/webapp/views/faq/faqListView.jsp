@@ -6,6 +6,8 @@
 <html>
 <head>
     <title>FAQ List</title>
+    <link rel="stylesheet" type="text/css" href="http://localhost:8080/project/views/css/faq/faqListVeiw.css">
+    
 </head>
 <body>
     <h1>Common FAQ's</h1>

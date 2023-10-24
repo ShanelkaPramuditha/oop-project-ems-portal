@@ -6,6 +6,7 @@
 <html>
 <head>
     <title>FAQ List</title>
+    <link rel="stylesheet" type="text/css" href="http://localhost:8080/project/views/css/faq/faqList.css">
 </head>
 <body>
     <h1>FAQ List</h1>
@@ -61,7 +62,7 @@
     <form action="../../DeleteFaqServlet" method="post">
         Faq ID: <input type="number" name="id" value="<%= request.getParameter("id") %>"><br>
         <input type="submit" value="Yes, Delete">
-        <button><a href="./faqList.jsp">No, Cancel</a></button>
+        <a href="./faqList.jsp">No, Cancel</a>
     </form>
     <a href="./addfaq.jsp">Add More faq</a>
 </body>
