@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Delete Task</title>
+    <link rel="stylesheet" type="text/css" href="http://localhost:8080/project/views/css/tasks/mcq/deleteTask.css">
 </head>
 <body>
     <h1>Delete Task</h1>

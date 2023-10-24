@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>MCQ Tasks</title>
+    <link rel="stylesheet" type="text/css" href="http://localhost:8080/project/views/css/tasks/mcq/viewMCQ.css">
 </head>
 <body>
     <h1>Active MCQ Task List</h1>

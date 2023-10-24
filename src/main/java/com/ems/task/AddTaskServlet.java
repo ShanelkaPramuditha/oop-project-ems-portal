@@ -62,7 +62,7 @@ public class AddTaskServlet extends HttpServlet {
 
             // Set a success attribute for your JSP to display the success modal
             request.setAttribute("success", true);
-            response.sendRedirect("./views/tasks/mcq/addMCQ.jsp");
+            response.sendRedirect("./views/users/dash/tDashboard.jsp");
 
             // Forward the request to your JSP page
             //RequestDispatcher dispatcher = request.getRequestDispatcher("./views/tasks/mcq/viewMCQ.jsp");

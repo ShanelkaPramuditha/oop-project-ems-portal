@@ -63,7 +63,7 @@ public class  loginServlet extends HttpServlet {
 					dip.forward(request, response);
 			    }
 			    else if (role.equals("teacher")) {
-			    	RequestDispatcher dip = request.getRequestDispatcher("./views/users/profile.jsp");
+			    	RequestDispatcher dip = request.getRequestDispatcher("./views/users/dash/tDashboard.jsp");
 			    	dip.forward(request, response);
 			    }
 			    else if (role.equals("teacher")) {
@@ -75,7 +75,7 @@ public class  loginServlet extends HttpServlet {
 			else {
 		        // The login was unsuccessful, username and password do not match
 		        // Redirect to the "home.jsp" page or any other appropriate page
-		        response.sendRedirect("home.jsp"); 
+		        response.sendRedirect("./views/home.jsp"); 
 				System.out.println(Integer.parseInt(request.getParameter("password")));
 			}
 			

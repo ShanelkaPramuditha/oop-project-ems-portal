@@ -50,8 +50,8 @@
         <h1>EMS Portal</h1>
         <nav>
             <ul>
-                <li><a href="aboutUs.jsp">About Us</a></li> <!-- Link to About Us page -->
-                <li><a href="contactUs.jsp">Contact Us</a></li>
+                <li><a href="http://localhost:8080/project/views/components/aboutUs.jsp">About Us</a></li> <!-- Link to About Us page -->
+                <li><a href="http://localhost:8080/project/views/components/contactUs.jsp">Contact Us</a></li>
                 <li><a href="http://localhost:8080/project/views/faq/faqListView.jsp">FAQ</a></li>
             </ul>
         </nav>

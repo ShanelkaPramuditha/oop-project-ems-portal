@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" type="text/css" href="http://localhost:8080/project/views/css/tasks/mcq/editTask.css">
     <meta charset="UTF-8">
     <title>Edit MCQ Task</title>
 </head>
