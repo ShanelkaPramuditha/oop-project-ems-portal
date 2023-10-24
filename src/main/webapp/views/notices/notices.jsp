@@ -1,11 +1,13 @@
 <!-- This Is The Main Notice Notice View For Teachers -->
 
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page import="jakarta.servlet.http.HttpServlet" language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
     <title>Notices</title>
+    <link rel="stylesheet" type="text/css" href="http://localhost:8080/project/views/css/notices/notices.css">
 </head>
 <body>
     <h1>Notices</h1>

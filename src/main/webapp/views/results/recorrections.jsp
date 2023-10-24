@@ -8,6 +8,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="project/src/main/webapp/views/css/results/recorrections.css">
 </head>
 <body>
 	<h1>Re correction Proposals</h1>
