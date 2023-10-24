@@ -59,7 +59,7 @@
     </style>
 </head>
 <body>
-<jsp:include page="../components/header.jsp" />
+
 
     <form action="../../DeleteUserServlet" method="DELETE">
         <input type="hidden" name="userId" value="${param.id}">
@@ -80,6 +80,9 @@
         <input type="password" class="custom-input" id="password" name="password" value="${param.password}" required disabled><br><br>
 
         <input type="submit"  value="Delete Account" onclick="showSuccessAlert()">
+    </form>
+</body>
+</html>howSuccessAlert()">
     </form>
 </body>
 </html>

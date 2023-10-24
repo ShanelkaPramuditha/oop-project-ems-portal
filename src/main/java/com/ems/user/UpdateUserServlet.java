@@ -26,7 +26,7 @@ public class UpdateUserServlet extends HttpServlet {
 
         try {
             Connection conn = DatabaseConnection.getConnection();
-            java.sql.PreparedStatement ps = conn.prepareStatement("UPDATE user_details SET Name=?, email=?, phone=?, username=?, password=? WHERE id=?;");
+            java.sql.PreparedStatement ps = conn.prepareStatement("UPDATE users SET uName=?, email=?, phone=?, username=?, password=? WHERE uId=?;");
             ps.setString(1, name);
             ps.setString(2, email);
             ps.setInt(3, Integer.parseInt(phone));
