@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Add Notice</title>
+    <link rel="stylesheet" type="text/css" href="http://localhost:8080/project/views/css/notices/addNotices.css">
 </head>
 <body>
     <h1>Add Notice</h1>

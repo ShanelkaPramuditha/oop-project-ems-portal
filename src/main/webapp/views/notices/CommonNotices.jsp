@@ -7,9 +7,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Notices</title>
+    <link rel="stylesheet" type="text/css" href="http://localhost:8080/project/views/css/notices/CommonNotices.css">
 </head>
 <body>
-    <h1>Faculty notices for the students notices</h1>
+    <h1>Faculty notices !</h1>
     <table border="1">
         <tr>
             <th>ID</th>

@@ -3,6 +3,7 @@
 <html>
 <head>
     <title>Results</title>
+    <link rel="stylesheet" type="text/css" href="http://localhost:8080/project/views/css/results/commonresults.css">
 </head>
 <body>
     <h1>Results Released</h1>

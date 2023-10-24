@@ -3,6 +3,7 @@
 <html>
 <head>
     <title>Results</title>
+    <link rel="stylesheet" type="text/css" href="http://localhost:8080/project/views/css/results/results.css">
 </head>
 <body>
     <h1>Results</h1>
@@ -72,7 +73,7 @@
 	</form>
 
     <br>
-    <a href="./views/results/results.jsp">Add Result</a>
+    <!-- <a href="./views/results/results.jsp">Add Result</a> -->
     <a href="./teacherRecorrection.jsp">Re corrections</a>
 </body>
 </html>
