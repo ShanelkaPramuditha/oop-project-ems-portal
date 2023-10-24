@@ -9,7 +9,10 @@
 <title>Insert title here</title>
 </head>
 <body>
+
 <jsp:include page="../components/header.jsp" />
+
+
 
 <h1>Login successfully</h1>
 <p> Recieved Id : ${uId }</p>
