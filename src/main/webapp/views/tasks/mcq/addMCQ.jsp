@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="stylesheet" type="text/css" href="../../css/tasks/mcq/addMCQ.css">
     <title>Add New Task</title>
 </head>
 <body>
@@ -8,7 +9,7 @@
     <form action="../../../AddTaskServlet" method="post">
         <label for="taskName">Task Name:</label>
         <input type="text" name="taskName" required><br><br>
-        <label for="subjectName">Subject Name :</label><br>
+        <label for="subjectName">Subject Name :</label><br>        
         
         <%
         // Loop question

@@ -1,6 +1,6 @@
 package com.ems.task;
 
-//import java.sql.Timestamp;
+import java.sql.Timestamp;
 
 public class Task {
     private int taskId;
@@ -8,6 +8,18 @@ public class Task {
     //private Timestamp expireTime;
     private int userId;
     private int qCount;
+	private Timestamp createTime;
+    
+    // Task
+    public void setTask(int taskId, String taskName, Timestamp createTime, int qCount) {
+    	this.taskId = taskId;
+    	this.taskName = taskName;
+    	this.createTime = createTime;
+    }
+    
+    public Timestamp getTime () {
+    	return createTime;
+    }
     
     // Task Name
     public void setTaskName(String taskName) {

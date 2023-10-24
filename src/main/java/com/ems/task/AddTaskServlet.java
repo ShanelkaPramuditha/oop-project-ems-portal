@@ -18,10 +18,10 @@ import jakarta.servlet.http.HttpSession;
 public class AddTaskServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
-        	HttpSession session = request.getSession();
+        	//HttpSession session = request.getSession();
             // Retrieve data from the JSP form
             String taskName = request.getParameter("taskName");
-            int userId = (int) session.getAttribute("uId");
+            int userId = 1;
             int qCount = Integer.parseInt(request.getParameter("qCount"));
 
             // Create a Task object and insert it into the Task table
@@ -62,10 +62,11 @@ public class AddTaskServlet extends HttpServlet {
 
             // Set a success attribute for your JSP to display the success modal
             request.setAttribute("success", true);
+            response.sendRedirect("./views/tasks/mcq/addMCQ.jsp");
 
             // Forward the request to your JSP page
-            RequestDispatcher dispatcher = request.getRequestDispatcher("./views/tasks/mcq/viewMCQ.jsp");
-            dispatcher.forward(request, response);
+            //RequestDispatcher dispatcher = request.getRequestDispatcher("./views/tasks/mcq/viewMCQ.jsp");
+            //dispatcher.forward(request, response);
         } catch (SQLException e) {
             e.printStackTrace(); // Handle database exceptions appropriately
         }

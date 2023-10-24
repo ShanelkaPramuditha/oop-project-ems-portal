@@ -4,10 +4,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Bootstrap demo</title>
+<title>EMS</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-<title>Insert title here</title>
-</head>
  <style>
         body {
             font-family: Arial, sans-serif;
@@ -133,8 +131,8 @@
                 <h2>SIGN IN</h2>
                         <form action="../loginServlet" method="post">
 
-                    <input type="text" placeholder="Username" required>
-                    <input type="password" placeholder="Password" required>
+                    <input type="text" placeholder="Username" name="username" required>
+                    <input type="password" placeholder="Password" name="password" required>
                     <div class="signin">
                       <button class="button" type="submit">SIGN IN</button>
                     </div>
