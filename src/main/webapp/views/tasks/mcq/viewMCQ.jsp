@@ -6,6 +6,7 @@
     <title>MCQ Tasks</title>
 </head>
 <body>
+<jsp:include page="../../components/header.jsp" />
     <h1>Active MCQ Task List</h1>
     <table border="1">
         <tr>
@@ -52,5 +53,6 @@
         %>
     </table>
     <br>
+    <jsp:include page="../../components/footer.jsp" />
 </body>
 </html>

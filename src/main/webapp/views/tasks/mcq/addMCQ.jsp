@@ -1,3 +1,8 @@
+<%-- Check if the user is authenticated --%>
+<% if ((session.getAttribute("authenticated") == null)) {
+        response.sendRedirect("../../home.jsp"); // Redirect to the login page
+        } %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,11 +10,12 @@
     <title>Add New Task</title>
 </head>
 <body>
+<jsp:include page="../../components/header.jsp" />
     <h2>MCQ Paper</h2>
     <form action="../../../AddTaskServlet" method="post">
         <label for="taskName">Task Name:</label>
         <input type="text" name="taskName" required><br><br>
-        <label for="subjectName">Subject Name :</label><br>        
+        <label for="subjectName">Subject Name :</label><br>
         
         <%
         // Loop question
@@ -44,5 +50,6 @@
         <!-- Submit Form -->
         <input type="submit" value="Submit">
     </form>
+    <jsp:include page="../../components/footer.jsp" />
 </body>
 </html>

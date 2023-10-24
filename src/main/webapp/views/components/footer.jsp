@@ -22,7 +22,7 @@ footer p {
 <body>
 <div>
     <footer class="bg-dark text-white mt-5">
-        <p>&copy; © Developed By Y2S1</p>
+        <p>© Developed By Y2S1</p>
        
     </footer>
 </div>

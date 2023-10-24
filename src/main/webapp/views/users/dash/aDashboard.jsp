@@ -4,6 +4,7 @@
 <% if (session.getAttribute("authenticated") == null) {
         response.sendRedirect("../../home.jsp"); // Redirect to the login page
         } %>
+        
 <!DOCTYPE html>
 <html>
 <head>

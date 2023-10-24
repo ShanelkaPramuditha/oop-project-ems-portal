@@ -4,10 +4,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Select Task</title>
+<title>MCQ</title>
 </head>
 <body>
 <jsp:include page="../../components/header.jsp" />
 <jsp:include page="../../components/footer.jsp" />
+
 </body>
 </html>

@@ -6,6 +6,7 @@
     <title>Edit MCQ Task</title>
 </head>
 <body>
+<jsp:include page="../../components/header.jsp" />
     <h1>Edit MCQ Task</h1>
 
     <form action="updateTask.jsp" method="post">
@@ -50,5 +51,6 @@
             }
         %>
     </form>
+    <jsp:include page="../../components/footer.jsp" />
 </body>
 </html>

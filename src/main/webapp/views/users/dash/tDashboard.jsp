@@ -4,7 +4,7 @@
 <html>
 <head>
     <title>Teacher Dashboard</title>
-    <link rel="stylesheet" type="text/css" href="http://localhost:8080/project/views/css/dash/tDashboard.css">
+    <link rel="stylesheet" type="text/css" href="../../css/dash/tDashboard.css">
 </head>
 <body>
     <body>

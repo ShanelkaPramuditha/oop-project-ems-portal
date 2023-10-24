@@ -6,6 +6,7 @@
     <title>Delete Task</title>
 </head>
 <body>
+<jsp:include page="../../components/header.jsp" />
     <h1>Delete Task</h1>
     
     <%@ page import="com.ems.db.DatabaseConnection" %>
@@ -47,5 +48,6 @@
     <%
         }
     %>
+    <jsp:include page="../../components/footer.jsp" />
 </body>
 </html>

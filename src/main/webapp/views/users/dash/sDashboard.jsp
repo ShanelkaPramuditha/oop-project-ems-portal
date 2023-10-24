@@ -4,7 +4,7 @@
 <html>
 <head>
     <title>Student Dashboard</title>
-    <link rel="stylesheet" type="text/css" href="http://localhost:8080/project/views/css/dash/sDashboard.css">
+    <link rel="stylesheet" type="text/css" href="./views/css/dash/sDashboard.css">
 
 </head>
 <body>

@@ -6,6 +6,7 @@
     <title>Update Task</title>
 </head>
 <body>
+<jsp:include page="../../components/header.jsp" />
     <h1>Update Task</h1>
     
         	<%@ page import="java.sql.Connection" %>
@@ -50,5 +51,6 @@
     <%
         }
     %>
+    <jsp:include page="../../components/footer.jsp" />
 </body>
 </html>
