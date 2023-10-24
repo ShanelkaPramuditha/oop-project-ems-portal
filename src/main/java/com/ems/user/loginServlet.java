@@ -43,15 +43,20 @@ public class  loginServlet extends HttpServlet {
 			    int phone = row.getInt("phone");
 			    String role = row.getString("role");
 			    
+			    request.setAttribute("uId", uId);
+				request.setAttribute("username", username);
+				request.setAttribute("password", password);	
+				request.setAttribute("name", name);
+				request.setAttribute("email", email);	
+				request.setAttribute("phone", phone);
+				request.setAttribute("role", role);
+			    
 			    // create log in session
 			    HttpSession session = request.getSession();
 			    session.setAttribute("uId", uId);
-			    //session.setAttribute("role", role);
+			    session.setAttribute("role", role);
 			    session.setAttribute("name", name);
 			    session.setAttribute("authenticated", true);
-			    System.out.println(role);
-			    
-			    //System.out.println(role.equals("student"));
 			    				
 			    if (role.equals("student")) {
 					RequestDispatcher dip = request.getRequestDispatcher("./views/users/dash/sDashboard.jsp");
@@ -61,7 +66,7 @@ public class  loginServlet extends HttpServlet {
 			    	RequestDispatcher dip = request.getRequestDispatcher("./views/users/dash/tDashboard.jsp");
 			    	dip.forward(request, response);
 			    }
-			    else if (role.equals("admin")) {
+			    else if (role.equals("teacher")) {
 			    	RequestDispatcher dip = request.getRequestDispatcher("./views/users/dash/aDashboard.jsp");
 			    	dip.forward(request, response);
 			    }
