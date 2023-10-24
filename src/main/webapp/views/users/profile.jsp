@@ -14,7 +14,7 @@
 
 
 
-<h1>Login successfully</h1>
+<!-- <h1>Login successfully</h1> -->
 <p> Recieved Id : ${uId }</p>
 <h1>Login successfully</h1>
    <p>Received username: ${username}</p>
@@ -28,38 +28,44 @@
     </c:url>
     <%-- <a href="${update}">  		
     <button id="update">update</button>
-    </a> --%>
-    <button id="update">update</button>
-    <button id="delete" class="btn btn-outline-danger">delete</button>
-    <script>
-    document.getElementById("update").addEventListener("click", function() {
-        // Define the values you want to send to the new JSP
-        var id = "${uId}";
-        var username = "${username}";
-        var password = "${password}";
-        var email = "${email}";
-        var name = "${name}";
-        var phone = "${phone}";
-        // Construct the URL with parameters
-        var url = "./views/users/updateUser.jsp?id=" + uId + "&password=" + password+ "&email=" + email+ "&name=" + name+ "&phone=" + phone+ "&username=" + username;
-        // Redirect to the new JSP
-        window.location.href = url;
-    });
-    
-    document.getElementById("delete").addEventListener("click", function() {
-        // Define the values you want to send to the new JSP
-        var id = "${id}";
-        var username = "${username}";
-        var password = "${password}";
-        var email = "${email}";
-        var name = "${name}";
-        var phone = "${phone}";
-        // Construct the URL with parameters
-        var url = "./views/users/confirmDelete.jsp?id=" + uId + "&password=" + password+ "&email=" + email+ "&name=" + name+ "&phone=" + phone+ "&username=" + username;
-        // Redirect to the new JSP
-        window.location.href = url;
-    });
-        
-    </script>
+    </a>  --%>
+
+<button id="update">update</button>
+<button id="delete" class="btn btn-outline-danger">delete</button>
+
+<script>
+document.getElementById("update").addEventListener("click", function() {
+    // Define the values you want to send to the new JSP
+    var id = "${uId}";
+    var username = "${username}";
+    var password = "${password}";
+    var email = "${email}";
+    var name = "${name}";
+    var phone = "${phone}";
+
+    // Construct the URL with parameters
+    var url = "./views/users/updateUser.jsp?id=" + id + "&password=" + password + "&email=" + email + "&name=" + name + "&phone=" + phone + "&username=" + username;
+
+    // Redirect to the new JSP
+    window.location.href = url;
+});
+
+document.getElementById("delete").addEventListener("click", function() {
+    // Define the values you want to send to the new JSP
+    var id = "${uId}";
+    var username = "${username}";
+    var password = "${password}";
+    var email = "${email}";
+    var name = "${name}";
+    var phone = "${phone}";
+
+    // Construct the URL with parameters
+    var url = "./views/users/confirmDelete.jsp?id=" + id + "&password=" + password + "&email=" + email + "&name=" + name + "&phone=" + phone + "&username=" + username;
+
+    // Redirect to the new JSP
+    window.location.href = url;
+});
+</script>
+
 </body>
 </html>

@@ -32,7 +32,7 @@ public class DeleteUserServlet extends HttpServlet {
             Connection conn = DatabaseConnection.getConnection();
 
             // Perform user account deletion
-            PreparedStatement deleteUser = conn.prepareStatement("DELETE FROM user_details WHERE id = ?");
+            PreparedStatement deleteUser = conn.prepareStatement("DELETE FROM users WHERE uId = ?");
             deleteUser.setInt(1, Integer.parseInt(this.userId));
             //deleteUser.setInt(1, 4);
             int count = deleteUser.executeUpdate();
